@@ -1,0 +1,26 @@
+[build-system]
+requires = ["maturin>=1.5,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "vanillabpe-byte"
+version = "0.1.0"
+description = "Byte-level vanilla BPE baseline for Indic scripts (GPT/tiktoken-style, same pipeline as AksharaG2P)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Shubham Jangid" }]
+requires-python = ">=3.8"
+dependencies = []
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Linguistic",
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[tool.maturin]
+python-source = "python"
+module-name = "vanillabpe_byte._core"
+features = ["python", "pyo3/extension-module"]
