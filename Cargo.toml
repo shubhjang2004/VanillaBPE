@@ -1,6 +1,6 @@
 [package]
 name = "vanillabpe_byte"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "Byte-level vanilla BPE baseline for Indic scripts (GPT/tiktoken-style, same pipeline as AksharaG2P)"
 license = "MIT"
